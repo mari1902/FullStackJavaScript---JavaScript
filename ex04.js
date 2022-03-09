@@ -10,20 +10,16 @@ if(velconfirmation) {
     initialvel = acelerationvel
 }
 
-let acelerationvel = xxx
-
-if(acelerationvel < 0) {
-    console.log("Nave está parada. Considere partir e aumentar a velocidade.")
+if(acelerationvel <= 0) {
+    alert("Nave está parada. Considere partir e aumentar a velocidade.")
 } else if (acelerationvel < 40) {
-    console.log("Você está devagar, podemos aumentar mais")
-}
-
-if(acelerationvel >= 40 && acelerationvel< 80) {
-    console.log("Parece uma boa velocidade para manter")
-} else if(acelerationvel >= 80 && acelerationvel < 100) {
-    console.log("Velocidade alta. Considere diminuir")
+    alert("Você está devagar, podemos aumentar mais")
+} else if(acelerationvel< 80) {
+    alert("Parece uma boa velocidade para manter")
+} else if(acelerationvel < 100) {
+    alert("Velocidade alta. Considere diminuir")
 } else {
-    console.log("Velocidade perigosa. Controle automático forçado")
+    alert("Velocidade perigosa. Controle automático forçado")
 }
 
-alert(pilotname + ", sua velocidade atual é de " + acelerationvel)
+alert(pilotname + ", sua velocidade atual é de " + acelerationvel + "km/s")
